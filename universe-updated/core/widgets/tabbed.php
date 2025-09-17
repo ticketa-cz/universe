@@ -2,7 +2,7 @@
 
 
 class widget_tabs extends WP_Widget {
-	function widget_tabs() {
+	function __construct() {
 		$widget_ops = array( 'description' => 'Most Popular, Recent, Comments, Tags' , 'id_base' => 'tabbed'  );
 		parent::__construct( 'tabbed','Tabbed  ', $widget_ops );
 	}
