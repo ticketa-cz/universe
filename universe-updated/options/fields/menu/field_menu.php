@@ -15,7 +15,7 @@ class universe_options_menu extends universe_options{
 	    echo '<select id="'.$this->field['id'].'" name="'.$this->args['opt_name'].'['.$this->field['id'].']">';
 	    echo '<option>Select Menu</option>';
 	    
-	    $menus = get_terms('nav_menu');
+	    $menus = get_terms( array( 'taxonomy' => 'nav_menu' ) );
 	    
 	    foreach( $menus as $menu ) {
 		    

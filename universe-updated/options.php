@@ -1100,11 +1100,11 @@ $sections[] = array(
 		$tags = $theme_data->get('Tags');
 	}else{
 		$theme_data = wp_get_theme(trailingslashit(get_stylesheet_directory()).'style.css');
-		$UNIVERSE_THEME_URI = $theme_data['URI'];
-		$description = $theme_data['Description'];
-		$author = $theme_data['Author'];
-		$version = $theme_data['Version'];
-		$tags = $theme_data['Tags'];
+		$UNIVERSE_THEME_URI = $theme_data->get('URI');
+		$description = $theme_data->get('Description');
+		$author = $theme_data->get('Author');
+		$version = $theme_data->get('Version');
+		$tags = $theme_data->get('Tags');
 	}	
 	
 	
