@@ -6,7 +6,7 @@ function flickr_photos_widget() {
 }
 class flickr_photos extends WP_Widget {
 
-	function flickr_photos() {
+	function __construct() {
 		$widget_ops = array( 'classname' => 'flickr-widget' );
 		$control_ops = array( 'width' => 250, 'height' => 350, 'id_base' => 'flickr' );
 		parent::__construct( 'flickr','Flickr Photos', $widget_ops, $control_ops );
