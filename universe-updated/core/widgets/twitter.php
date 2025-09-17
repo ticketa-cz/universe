@@ -2,10 +2,10 @@
 
 class TwitterWidget extends WP_Widget
 {
-    function TwitterWidget(){
+    function __construct(){
 		$widget_ops = array('description' => 'Displays Your Twitter Updates');
 		$control_ops = array('width' => 300, 'height' => 300);
-		parent::__construct('twi7er',$name='Twitter',$widget_ops,$control_ops);
+		parent::__construct('twi7er','Twitter',$widget_ops,$control_ops);
     }
 
 

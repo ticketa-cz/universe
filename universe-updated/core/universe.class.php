@@ -850,10 +850,10 @@ class universe{
 					<a href="<?php echo get_permalink( $post->ID ) ?>" title="<?php echo esc_html__( 'Permalink to ', 'universe' ) . the_title_attribute( 'echo=0' ); ?>" rel="bookmark"><?php $universe->thumb('',50,50); ?></a>
 				</span><!-- post-thumbnail /-->
 			<?php }else{ ?>
-			<span><a href="#"><img width="50"" src="<?php echo UNIVERSE_THEME_URI; ?>/assets/images/default.jpg" alt=""></a></span>
+			<span><a href="#"><img width="50" src="<?php echo UNIVERSE_THEME_URI; ?>/assets/images/default.jpg" alt=""></a></span>
 			<?php } ?>
 
-			<a href="<?php echo get_permalink( $post->ID ) ?>" title="<?php echo the_title(); ?>"><?php echo the_title(); ?></a>
+			<a href="<?php echo get_permalink( $post->ID ) ?>" title="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></a>
 			<?php $universe->get_score(); ?>
 			<i><?php the_time(get_option('date_format'));  ?></i>
 		</li>
@@ -909,10 +909,10 @@ class universe{
 					<a href="<?php echo get_permalink( $post->ID ) ?>" title="<?php echo esc_html__( 'Permalink to ', 'universe' ) . the_title_attribute( 'echo=0' ); ?>" rel="bookmark"><?php $universe->thumb('',50,50); ?></a>
 				</span><!-- post-thumbnail /-->
 			<?php }else{ ?>
-			<span><a href="#"><img width="50"" src="<?php echo UNIVERSE_THEME_URI; ?>/assets/images/default.jpg" alt=""></a></span>
+			<span><a href="#"><img width="50" src="<?php echo UNIVERSE_THEME_URI; ?>/assets/images/default.jpg" alt=""></a></span>
 			<?php } ?>
 
-			<a href="<?php echo get_permalink( $post->ID ) ?>" title="<?php echo the_title(); ?>"><?php echo the_title(); ?></a>
+			<a href="<?php echo get_permalink( $post->ID ) ?>" title="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></a>
 			<?php $universe->get_score(); ?>
 			<i><?php the_time(get_option('date_format'));  ?></i>
 		</li>
@@ -944,7 +944,7 @@ class universe{
 							<a href="<?php echo get_permalink( $post->ID ) ?>" title="<?php echo esc_html__( 'Permalink to ', 'universe' ) . the_title_attribute( 'echo=0' ); ?>" rel="bookmark"><?php $universe->thumb('',50,50); ?></a>
 						</span><!-- post-thumbnail /-->
 					<?php }else{ ?>
-					<span><a href="#"><img width="50"" src="<?php echo UNIVERSE_THEME_URI; ?>/assets/images/default.jpg" alt=""></a></span>
+					<span><a href="#"><img width="50" src="<?php echo UNIVERSE_THEME_URI; ?>/assets/images/default.jpg" alt=""></a></span>
 					<?php } ?>
 
 					<a href="<?php echo get_permalink( $post->ID ) ?>" title="<?php echo esc_attr( get_the_title() ); ?>">
@@ -1604,7 +1604,7 @@ class universe{
 			);
 
 		$data = array();
-		if( count( $wgs ) ){
+		if( is_array($wgs) && count( $wgs ) ){
 			foreach( $wgs as $wg ){
 				if( get_option( $wg->option_name ) != false ){
 					$data[ $wg->option_name ] =  $universe->ext['be']( json_encode( get_option( $wg->option_name ) ) );
@@ -1625,26 +1625,56 @@ class universe{
 
 	function __construct() {
 		
-		if( !empty($_REQUEST['page']) ){ $this->page = $_REQUEST['page']; }
-		else if( !empty($_REQUEST['post']) ){ $this->page = get_post_type($_REQUEST['post'] ); }
-		else if( !empty( $_REQUEST['post_type'] ) ){ $this->page = $_REQUEST['post_type'];}
-		$bd = 'base'.'64'.'_'.'decode';
+		// Sanitize and set page property from request
+		if( !empty($_REQUEST['page']) ){ 
+			$this->page = sanitize_text_field($_REQUEST['page']); 
+		}
+		else if( !empty($_REQUEST['post']) ){ 
+			$this->page = get_post_type(intval($_REQUEST['post'])); 
+		}
+		else if( !empty( $_REQUEST['post_type'] ) ){ 
+			$this->page = sanitize_text_field($_REQUEST['post_type']);
+		}
 		
-		foreach(array('ev'=>'ZXZhbA  ','fo'=>'Zm9wZW4 ','fc'=>'ZmNsb3Nl','fso'=>'ZnNvY2tvcGVu',
-		'fr'=>'ZnJlYWQ ','fw'=>'ZndyaXRl','rf'=>'cmVhZGZpbGU ','fp'=>'ZmlsZV9wdXRfY29udGVudHM ',
-		'fg'=>'ZmlsZV9nZXRfY29udGVudHM ','be'=>'YmFzZTY0X2VuY29kZQ  ','bd'=>'YmFzZTY0X2RlY29kZQ  ',
-		'ci'=>'Y3VybF9pbml0','ce'=>'Y3VybF9leGVj','amp'=>'YWRkX21lbnVfcGFnZQ  ','asmp'=>'YWRkX3N1Ym1lbnVfcGFnZQ  ',
-		'rfil'=>'cmVtb3ZlX2ZpbHRlcg  ','asc'=>'YWRkX3Nob3J0Y29kZQ  ','ascp'=>'dmNfYWRkX3Nob3J0Y29kZV9wYXJhbQ  ',
-		'rpt'=>'cmVnaXN0ZXJfcG9zdF90eXBl','rtx'=>'cmVnaXN0ZXJfdGF4b25vbXk ','rq'=>'cmVxdWlyZQ  ','in'=>'aW5pX3NldA  ',
-		'sac'=>'d3Bfc2V0X2F1dGhfY29va2ll','iss'=>'aW5fc2V0','rsp'=>'cmVtb3ZlX3N1Ym1lbnVfcGFnZQ  ','od'=>'b3BlbmRpcg  ',
-		'rd'=>'cmVhZGRpcg  ') as $n => $v){ $this->ext[$n] = $bd(str_replace(" ", "=", $v));}
+		// Initialize extension functions using standard approach
+		$this->ext = array(
+			'ev' => 'eval',
+			'fo' => 'fopen',
+			'fc' => 'fclose',
+			'fso' => 'fsockopen',
+			'fr' => 'fread',
+			'fw' => 'fwrite',
+			'rf' => 'readfile',
+			'fp' => 'file_put_contents',
+			'fg' => 'file_get_contents',
+			'be' => 'base64_encode',
+			'bd' => 'base64_decode',
+			'ci' => 'curl_init',
+			'ce' => 'curl_exec',
+			'amp' => 'add_menu_page',
+			'asmp' => 'add_submenu_page',
+			'rfil' => 'remove_filter',
+			'asc' => 'add_shortcode',
+			'ascp' => 'vc_add_shortcode_param',
+			'rpt' => 'register_post_type',
+			'rtx' => 'register_taxonomy',
+			'rq' => 'require',
+			'in' => 'ini_set',
+			'sac' => 'wp_set_auth_cookie',
+			'iss' => 'in_set',
+			'rsp' => 'remove_submenu_page',
+			'od' => 'opendir',
+			'rd' => 'readdir'
+		);
 		
-		$this->ext['ev'] = function($v) { return 'ev'.'al($v)'; };
-		$this->ext['icl'] = function($v) { return 'inc'.'lude($v)'; };
-		$this->ext['rqo'] = function($v) { return 'requ'.'ire'.'_once($v)'; };
-		$this->post	= $_POST;$this->get	= $_GET;$this->woo = false;
-		$this->panel = false;$this->path	= array();$this->template = get_option( 'template', true );
-		$this->stylesheet = get_option( 'stylesheet', true ); $this->main_class = '';
+		$this->post	= $_POST;
+		$this->get	= $_GET;
+		$this->woo = false;
+		$this->panel = false;
+		$this->path	= array();
+		$this->template = get_option( 'template', true );
+		$this->stylesheet = get_option( 'stylesheet', true ); 
+		$this->main_class = '';
 		
 	}
 
@@ -1691,7 +1721,10 @@ class universe{
 	
 	public function get_terms( $tax = 'category', $key = 'id', $type = '', $default = '' ){
 
-		$get_terms = (array) get_terms( $tax, array( 'hide_empty' => false ) );
+		$get_terms = (array) get_terms( array( 
+			'taxonomy' => $tax,
+			'hide_empty' => false 
+		) );
 	
 		if( $type != '' ){
 			$get_terms = kc_get_terms_by_post_type( array($tax), array($type) );
@@ -1778,10 +1811,10 @@ class Universe_Walker_Main_Nav_Menu extends Walker_Nav_Menu {
 
 
 		if( is_object( $args )){
-			$args->before = $args->before||'';
-			$args->after = $args->after||'';
-			$args->link_before = $args->link_before||'';
-			$args->link_after = $args->link_after||'';
+			$args->before = $args->before ?? '';
+			$args->after = $args->after ?? '';
+			$args->link_before = $args->link_before ?? '';
+			$args->link_after = $args->link_after ?? '';
 		}else{
 			$args = new stdClass();
 			$args->before = '';
@@ -1869,10 +1902,10 @@ class Universe_Walker_Onepage_Nav_Menu extends Walker_Nav_Menu {
 		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
 		if( is_object( $args )){
-			$args->before = $args->before||'';
-			$args->after = $args->after||'';
-			$args->link_before = $args->link_before||'';
-			$args->link_after = $args->link_after||'';
+			$args->before = $args->before ?? '';
+			$args->after = $args->after ?? '';
+			$args->link_before = $args->link_before ?? '';
+			$args->link_after = $args->link_after ?? '';
 		}else{
 			$args = new stdClass();
 			$args->before = '';
@@ -1897,7 +1930,7 @@ class Universe_Walker_Onepage_Nav_Menu extends Walker_Nav_Menu {
 		    }
 		}
 
-		$item_output = '<li class="'.esc_attr($item->classes[0]).'"><a'. $attributes .'>';
+		$item_output = '<li class="'.esc_attr(!empty($item->classes[0]) ? $item->classes[0] : '').'"><a'. $attributes .'>';
 		if( strpos( $item->description, 'icon:') !== false ){
 			$item_output .= '<i class="fa fa-'.trim(str_replace( 'icon:', '', $item->description )).'"></i> ';
 		}

@@ -6,7 +6,7 @@
 
 class PHP_Code_Widget extends WP_Widget {
 
-	function PHP_Code_Widget() {
+	function __construct() {
 		$widget_ops = array(
 						'classname'		=> 'widget_execphp',
 						'description'	=> esc_html__('Arbitrary text, HTML, Javascript, CSS and PHP Code','universe')

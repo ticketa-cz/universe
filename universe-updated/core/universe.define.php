@@ -15,12 +15,12 @@
 		define('DS', DIRECTORY_SEPARATOR);
 	
 	$theme = wp_get_theme();
-	if( !empty( $theme['Template'] ) ){
-		$theme = wp_get_theme($theme['Template']);
+	if( !empty( $theme->get('Template') ) ){
+		$theme = wp_get_theme($theme->get('Template'));
 	}
-	define('UNIVERSE_THEME_NAME', $theme['Name'] );
-	define('UNIVERSE_THEME_SLUG', $theme['Template'] );
-	define('UNIVERSE_THEME_VERSION', $theme['Version'] );
+	define('UNIVERSE_THEME_NAME', $theme->get('Name') );
+	define('UNIVERSE_THEME_SLUG', $theme->get('Template') );
+	define('UNIVERSE_THEME_VERSION', $theme->get('Version') );
 
 	define('UNIVERSE_HOME_URL', home_url() );
 	define('UNIVERSE_SITE_URI', site_url() );

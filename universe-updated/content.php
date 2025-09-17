@@ -28,7 +28,7 @@
 		<?php if ( has_post_thumbnail( $post->ID ) ): $noimg = false; ?>
 		<div class="entry-header">
 			<figure>
-			<img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php the_title(); ?>">
+			<img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>">
 			</figure>
 		</div>
 		<?php endif; ?>
@@ -42,7 +42,7 @@
 		</div>
 		<?php } ?>
 		<div class="title">
-			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<h2><a href="<?php the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
 			<ul class="post-meta">
 				<li><?php echo esc_html__( 'Written by:', 'universe' ); ?> <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo get_the_author(); ?></a>
 				</li>
