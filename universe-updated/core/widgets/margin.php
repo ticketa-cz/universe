@@ -6,7 +6,7 @@
 
 class Margin_Widget extends WP_Widget {
 
-	function Margin_Widget() {
+	function __construct() {
 		$widget_ops = array(
 						'classname'		=> 'widget_margin',
 						'description'	=> esc_html__('Creating distance between widget.','universe')

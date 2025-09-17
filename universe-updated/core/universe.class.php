@@ -1604,7 +1604,7 @@ class universe{
 			);
 
 		$data = array();
-		if( count( $wgs ) ){
+		if( is_array($wgs) && count( $wgs ) ){
 			foreach( $wgs as $wg ){
 				if( get_option( $wg->option_name ) != false ){
 					$data[ $wg->option_name ] =  $universe->ext['be']( json_encode( get_option( $wg->option_name ) ) );

@@ -105,7 +105,7 @@ get_header();
 										<?php endif ?>
 
 										<div class="title animated ext-fadeInUp">
-											<h2><?php the_title(); ?></h2>
+											<h2><?php echo get_the_title(); ?></h2>
 
 											<?php if ( !empty( $universe->cfg['showMeta'] ) && $universe->cfg['showMeta'] ==1 ): ?>
 												<ul class="post-meta">
