@@ -1,0 +1,281 @@
+/* DEMO */
+	.universe-slider-btn.btn-color,
+	.v2_feature_section1.style-3 .box:hover .kc-icon-wrapper i,
+	h3.title-style2:before,
+	.v2_feature_section2 .btn-style1,
+	.service-item .title-style3 h4:before,
+	.working-line .line .working-item .item-dot:before,
+	.v2_feature_section9 .item-content:hover i,
+	.universe-our-team .kc-tabs-slider-nav li.kc-title-active figure:after,
+	.universe-our-team .kc-team-2 .content-subtitle:before,
+	.uni-pricing-1:hover, .uni-pricing-1.bestsell,
+	.v2_feature_newsletters,
+	.portfolio .portfolio-btn button:before, 
+	.portfolio .cbp-l-filters-alignCenter .cbp-filter-item:before,
+	.v2_feature_section1.style-2 .box:hover .box-icon i,
+	.what-we-do .kc-tabs-slider-nav li.kc-title-active .wrap-icon i, 
+	.what-we-do .kc-tabs-slider-nav li.kc-title-active .wrap-icon:before, 
+	.what-we-do .kc-tabs-slider-nav li.kc-title-active .wrap-icon:after,
+	.features .features-slider .item .box-icon:hover,
+	.what-we-do .owl-carousel h4:before,
+	.feature-box-side-right h3:after,
+	.what-we-do .kc-tabs-slider-nav li:hover .wrap-icon i,
+	.feature_section3.style-2 .btn-style3:hover,
+	.master-slider-main-widget .ms-slide .btn-style3:hover,
+	.v2_feature_section7 .portfolio .cbp-l-filters-alignCenter .cbp-filter-item.cbp-filter-item-active::before, 
+	.v2_feature_section7 .portfolio .cbp-l-filters-alignCenter .cbp-filter-item:hover:before,
+	.our_process:hover .content-icon i,
+	.v4_feature_section4 .v4_but1 .btn-style3,
+	.v4_feature_section4 .v4_but2 .btn-style3:hover,
+	.our-team-2 .content-socials a:hover,
+	#menu-onepage.nav-collapse a:hover,
+	#menu-onepage.nav-collapse a:active,
+	#menu-onepage.nav-collapse .active a
+	{
+		background-color: {color};
+	}
+	
+	.uni_progrcessbar .kc-ui-progress,
+	.shop_feature_section7 .kc-fb-layout-3:hover .content-icon i{
+		background-color: {color} !important;
+	}
+
+	.universe-slider-btn.btn-color:hover,
+	.portfolio .portfolio-btn button.current, 
+	.portfolio .portfolio-btn button:hover, 
+	.portfolio .cbp-l-filters-alignCenter 
+	.cbp-filter-item.cbp-filter-item-active, 
+	.portfolio .cbp-l-filters-alignCenter .cbp-filter-item:hover,
+	.portfolio .portfolio-content .cbp-item .cbp-caption-activeWrap .cbp-l-caption-body a:hover,
+	.v2_feature_section7 .portfolio .portfolio-content .cbp-item .cbp-caption-activeWrap .cbp-l-caption-body a:hover,
+	.uni-post-1 .kc-list-item-4 .kc-post-header .post-title-alt a:hover,
+	.blog-stlye-2 .kc-list-item-3 .entry-meta a,
+	.uni-section-58 .kc-feature-boxes:hover .content-icon i,
+	.woocommerce .woocommerce-info a:hover,
+	.uni-post-2 .kc-list-item-3 .entry-meta a,
+	.v2_feature_section1 .box-icon i,
+	.v4_box:hover .content-icon i,
+	.social-contact a:hover i,
+	.services1_feature_section4 .service-item i{
+		color: {color};
+	}
+
+	.universe-slider-btn.btn-color,
+	.v2_feature_section9 .item-content:hover i,
+	.v2_feature_section1.style-2 .box:hover .box-icon i,
+	.uni-section-58 .kc-feature-boxes:hover,
+	.feature_section3.style-2 .btn-style3:hover,
+	.master-slider-main-widget .ms-slide .btn-style3:hover,
+	.our_process:hover .content-icon i,
+	.v4_feature_section4 .v4_but1 .btn-style3,
+	.v4_feature_section4 .v4_but2 .btn-style3:hover,
+	.our-team-2 .content-socials a:hover{
+		border-color: {color};
+	}
+	
+	.shop_feature_section7 .kc-fb-layout-3:hover .content-icon i{
+		border-color: {color} !important;
+	}
+
+	.v2_feature_section1 .box-icon i{
+		border-bottom-color: {color};
+	}
+/* SHOP WOO */
+	.minicart-reponsive .cart-items,
+	.tpbut.minicart-li a .cart-items,
+	.woocommerce-tabs ul.tabs li.active, .woocommerce-tabs ul.tabs li:hover,
+	#tab-reviews #review_form #respond #commentform input[type="submit"],
+	.product-buttons .button.product_type_simple:hover, 
+	.product-buttons .button.product_type_variable:hover,
+	.woocommerce .widget_price_filter .ui-slider .ui-slider-range, 
+	.woocommerce-page .widget_price_filter .ui-slider .ui-slider-range,
+	.order-dropdown ul li a:hover,
+	.woocommerce a.remove:hover,
+	.woocommerce-page .button:hover,
+	.list .product-buttons .button.product_type_simple:hover,
+	.list .product-buttons .button.product_type_variable:hover,
+	.list .product-buttons .show_details_button:hover,
+	.order-info mark,
+	.woocommerce-page #payment > div input[type="submit"],
+	ul.tabs li.active, html ul.tabs li.active a, 
+	html ul.tabs li.active a:hover,
+	#universe_cart ul li.mini_cart_item .remove:hover{
+		background-color: {color};
+	}
+
+	ul.products li.product .price .amount,
+	.single-product .price ins,
+	.single-product .price > .amount,
+	.single-product .product_meta .tagged_as a:hover,
+	span.posted_in a:hover,
+	.product span.onsale,
+	ul.products li.product .price .amount,
+	.widget_layered_nav_filters ul li a::before,
+	.product_list_widget .amount,
+	ul.cart_list li .widget-post-text .quantity .amount,
+	ul.cart_list li .widget-post-text a,
+	.woocommerce .star-rating span:before,
+	.woocommerce p.stars a:hover, 
+	.woocommerce p.stars.selected a.active{
+		color: {color};
+	}
+
+	.woocommerce-product-search input.search-field:hover, 
+	.woocommerce-product-search input.search-field:focus,
+	#sidebar .widget.woocommerce ul li a.remove:hover,
+	.woocommerce a.remove:hover,
+	.shop_table.cart .quantity input.qty:hover,
+	.woocommerce form input.input-text:hover, .woocommerce form input.input-text:focus,
+	.woocommerce form .form-row input.input-text:hover, 
+	.woocommerce form .woocommerce-shipping-fields textarea.input-text:hover, 
+	.woocommerce form .form-row input.input-text:focus, 
+	.woocommerce form .woocommerce-shipping-fields textarea.input-text:focus,
+	#universe_cart ul li.mini_cart_item .remove:hover {
+		border-color: {color};
+	}
+/* BLOG */
+	.page_title3 .title h1:before,
+	.page_title4 .pagenation:before,
+	.cbp-l-grid-masonry-posts .cbp-item .entry-content .post-meta.bottom li.blog-post-share ul li a:hover,
+	.cd-timeline-content .cd-date strong,
+	.no-touch .cd-timeline-content .cd-read-more:hover,
+	.blog-post-share ul li a:hover,
+	.cd-timeline-content .cd-date b,
+	.pagination ul li span:hover, 
+	.pagination ul li a:hover, 
+	.pagination ul li .page-numbers.current,
+	.single-post .post .post-meta .single-post-share ul li a:hover,
+	#comments .comment-form .form-submit input[type='submit'],
+	.post .post-tag a:before{
+		background-color: {color};
+	}
+
+	.page_title2 .pagenation a:hover,
+	.page_title4 .pagenation a:hover,
+	.page_title5 .pagenation span,
+	.page_title5 .pagenation a:hover,
+	.cbp-l-grid-masonry-posts .cbp-item .entry-content .title .post-meta li a,
+	.cbp-l-grid-masonry-posts .cbp-item .entry-content .title h2 a:hover,
+	.cbp-l-grid-masonry-posts .cbp-item .entry-content .post-meta.bottom li a,
+	.blog-timeline .cd-timeline-block .cd-timeline-content .post-meta li a,
+	.btn-readmore a:hover,
+	.main-content .post .entry-content .title .post-meta li a,
+	.main-content .post .entry-content .title h2 a:hover,
+	#sidebar .widget.widget_search form button:before,
+	#sidebar .widget.widget_categories ul li,
+	#sidebar .widget.widget_recent_posts ul li .title .post-meta li a,
+	#sidebar .widget.widget_recent_posts ul li .title h4 a:hover,
+	#sidebar .widget ul li a:hover,
+	.about-author .social li a:hover,
+	#related_posts .recent_posts_list a.relate-link:hover,
+	#comments .logged-in-as a,
+	#comments .comment-block .comment-content .comment-header .comment-link a:hover,
+	#comments .comment-form .form-submit:hover input[type='submit'],
+	.post .post-tag a:hover,
+	#sidebar .widget.widget_categories ul li a:hover,
+	.work-single .work-content .work-content-right ul li .social li a:hover,
+	#footer .widget.widget_recent_posts ul li .title .post-meta li a,
+	#footer .widget.widget_recent_posts ul li .title h4 a:hover,
+	#footer .menu-footer li:hover a, #footer .menu-footer li.active a,
+	#footer .social ul li a:hover, 
+	#footer .social .kc-multi-icons-wrapper a:hover, 
+	#footer .social .kc-multi-icons-wrapper a:hover i,
+	#header .top-header .top-right .social li a:hover{
+		color: {color};
+	}
+
+	.cbp-l-loadMore-button .cbp-l-loadMore-link:hover{
+		color: {color} !important;
+	}
+
+	.cbp-l-grid-masonry-posts .cbp-item .entry-content .post-meta.bottom li.blog-post-share ul li a:hover,
+	.btn-readmore a:hover,
+	.blog-post-share ul li a:hover,
+	.pagination ul li span:hover, 
+	.pagination ul li a:hover, 
+	.pagination ul li .page-numbers.current,
+	.single-post .post .post-meta .single-post-share ul li a:hover,
+	#comments .comment-block .comment-content .comment-header .comment-link a:hover,
+	#comments .comment-form .form-submit:hover input[type='submit']{
+		border-color: {color};
+	}
+
+	.cbp-l-loadMore-button .cbp-l-loadMore-link:hover{
+		border-color: {color} !important;
+	}
+
+	.cbp-l-loadMore-button .cbp-l-loadMore-link:after,
+	.blog-timeline .btn-style3:hover:after{
+		border-left-color: {color};
+    	border-bottom-color: {color};
+	}
+
+	.blog-timeline .cd-timeline-content .cd-date strong:after,
+	.cd-timeline-content .cd-date strong:before,
+		.blog-timeline .cd-timeline-content .cd-date b:before{
+		border-right-color: {color};
+	}
+	.blog-timeline .cd-timeline-content .cd-date b:after{
+		border-left-color: {color};
+	}
+
+	#comments .comment-block .comment-content .comment-header .comment-link a:after,
+	#comments .comment-form .form-submit:hover:before{
+		border-top-color: {color};
+	}
+/* HEADER AND FOOTER */
+	#header .top-header .top-right .main-menu .nav > li > a:before,
+	.menu_main .dropdown-menu > li.current_page_item > a,
+	#header .top-header .top-right .main-menu .nav ul li.current-menu-item > a,
+	ul.nav>li>a:before,
+	.widget .tags li a:hover, .tagcloud a:hover{
+		background-color: {color};
+	}
+
+	#header .top-header .top-right .main-menu .nav li:hover >  a, 
+	#header .top-header .top-right .main-menu .nav li.current-menu-item > a,
+	ul.nav>li>a:hover,
+	.dropdown-menu>li>a:hover,
+	.yamm .yamm-content ul li a:hover,
+	.nav-search:hover,
+	.tpbut.minicart-li:hover a,
+	.top-nav-right a:hover,
+	#header .top-header .top-right .yamm .dropdown.yamm-fw .dropdown-menu li a:hover,
+	#header .top-header .top-right .yamm .dropdown.yamm-fw .dropdown-menu li a:hover, 
+	#header .top-header .top-right .yamm .dropdown.yamm-fw .dropdown-menu li.current-menu-item a,
+	.yamm .yamm-content ul li.current-menu-item a,
+	.nav-collapse a:hover,
+	.nav-collapse a:active,
+	.nav-collapse .active a,
+	.header-2 .dropdown-menu>li>a:hover,.header-2 .dropdown-menu>li>a:focus{
+		color: {color};
+	}
+/* SUB PAGE */
+	.contact-style1 i,
+	.contact-info h3:before,
+	.contact-form .btn-submit input[type='submit'],
+	.services4_feature_section1 .kc-feature-boxes .content-icon i,
+	.about5_feature_section5 .special-fact .special-fact-item .item-content:hover i,
+	.services2_feature_section2 .content-icon i,
+	.services2_feature_section3 .kc-cta-button a,
+	.services5_feature_section2 .kc-call-to-action .kc-cta-button a,
+	.uni-pricing-2 .content-button a:hover,
+	.uni-pricing-2 .content-button a:hover{
+		background: {color};
+	}
+
+	.services4_feature_section1 .kc-feature-boxes:hover .content-icon i,
+	.uni_calltoaction .kc-cta-button a,
+	.about5_feature_section1 .content-icon i,
+	.services2_feature_section2  .kc-feature-boxes:hover .content-icon i,
+	.services5_feature_section1 .kc-feature-boxes:hover .content-icon i,
+	.uni-pricing-2:hover .header-pricing .kc-pricing-price span{
+		color: {color};
+	}
+
+	.services4_feature_section1 .kc-feature-boxes .content-icon i,
+	.services2_feature_section2 .content-icon i,
+	.services2_feature_section3 .kc-cta-button a,
+	.uni-pricing-2 .content-button a:hover{
+		border-color: {color};
+	}
