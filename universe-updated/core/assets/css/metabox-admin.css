@@ -1,0 +1,22 @@
+/****************/
+span.description{
+	clear: both;
+	display: block;
+}
+
+.form-table td span.description{
+	padding-top: 7px;
+}
+
+.single-page-settings .form-table tr {
+    border-bottom: 1px dotted #e5e5e5;
+}
+
+.single-page-settings .form-table{
+	display: table;
+}
+
+.shortcode_layout_preview{
+    margin-top: 10px;
+    padding: 0;
+}
